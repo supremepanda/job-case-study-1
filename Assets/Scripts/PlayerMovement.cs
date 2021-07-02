@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -21,5 +22,6 @@ public class PlayerMovement : MonoBehaviour
                 _agent.SetDestination(hit.point);
             }
         }
+#endif
     }
 }
