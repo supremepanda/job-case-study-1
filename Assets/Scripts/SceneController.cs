@@ -5,9 +5,9 @@ public class SceneController : MonoBehaviour
 {
     public void NextScene()
     {
-        int sceneCount = SceneManager.sceneCount;
+        int sceneCount = SceneManager.sceneCountInBuildSettings;
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-
+        
         if (currentScene < sceneCount - 1)
         {
             SceneManager.LoadScene(currentScene + 1);
@@ -21,5 +21,10 @@ public class SceneController : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(SceneBuildIndex.MainMenu);
+    }
+
+    public void RestartCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

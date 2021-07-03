@@ -205,7 +205,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6712920444464876467, guid: 7258aea0ca7e6f34e985b19cbfd79bf9,
           type: 3}
-        m_MethodName: OnStartGameButton
+        m_MethodName: OnNextGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

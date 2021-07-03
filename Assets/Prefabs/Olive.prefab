@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 619399650144123511}
   - component: {fileID: 619399650142992567}
   - component: {fileID: 8176107146389009746}
-  - component: {fileID: 8176107146389009747}
+  - component: {fileID: 1143290312800256045}
+  - component: {fileID: 8921809494159496969}
   m_Layer: 0
   m_Name: Olive
-  m_TagString: Untagged
+  m_TagString: olive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,16 +100,30 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 116
   m_CollisionDetection: 2
---- !u!65 &8176107146389009747
-BoxCollider:
+--- !u!114 &1143290312800256045
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619399650144986743}
-  m_Material: {fileID: 13400000, guid: 254283d888db5924693b1403da358b5b, type: 2}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369ca52fecd8aee489d00ffafb979f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectedColorMaterial: {fileID: 2100000, guid: 3bed3e6c816ad8246a2835f7f248ff16,
+    type: 2}
+--- !u!135 &8921809494159496969
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619399650144986743}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2307464, y: 0.18461043, z: 0.1843642}
+  m_Radius: 0.1153732
   m_Center: {x: 0, y: 0.09230521, z: 0}

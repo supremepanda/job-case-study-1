@@ -4,24 +4,44 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     private NavMeshAgent _agent;
+    private ApplicationType _applicationType;
 
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        _applicationType = GameManager.Instance.ApplicationType;
     }
 
-    private void FixedUpdate()
+    private void AgentMovement(Vector3 targetPosition)
     {
-#if UNITY_EDITOR
-        if (Input.GetMouseButtonDown(0))
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(targetPosition);
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            _agent.SetDestination(hit.point);
+        }
+    }
+    
+    private void Update()
+    {
+        if (_applicationType == ApplicationType.Build)
+        {
+            if (Input.touchCount > 0)
             {
-                _agent.SetDestination(hit.point);
+                Touch touch = Input.GetTouch(0);
+
+                if (touch.phase == TouchPhase.Began)
+                {
+                    AgentMovement(touch.position);
+                }
             }
         }
-#endif
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                AgentMovement(Input.mousePosition);
+            }
+        }
     }
 }
