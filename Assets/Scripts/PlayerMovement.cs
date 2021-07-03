@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
