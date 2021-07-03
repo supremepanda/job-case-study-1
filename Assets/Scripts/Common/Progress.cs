@@ -1,10 +1,9 @@
-using System;
 using Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Level1
+namespace Common
 {
     public class Progress : MonoBehaviour, IProgress
     {
@@ -46,6 +45,9 @@ namespace Level1
 
             if (_percentage >= 100f)
             {
+                _percentage = 100;
+                progressSlider.value = _percentage;
+                progressText.text = $"%{_percentage}";
                 _finalPanel.ActivateFinalPanel();
             }
         }
