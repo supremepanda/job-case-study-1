@@ -34,4 +34,12 @@ namespace Common
         Hamburger,
         CheeseSlice
     }
+
+    public enum Rewards
+    {
+        Olive,
+        Banana,
+        HotDog,
+        Hamburger
+    }
 }

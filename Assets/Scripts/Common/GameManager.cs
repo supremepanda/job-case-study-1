@@ -39,7 +39,7 @@ namespace Common
                 DontDestroyOnLoad(gameObject);
                 _instance = this;
                 InitializeManager();
-                Debug.Log(_instance._applicationType);
+                //Debug.Log(_instance._applicationType);
             }
         }
     }
