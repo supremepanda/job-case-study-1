@@ -12,10 +12,10 @@ public enum ApplicationType
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameManager Instance { get; }
+    public static GameManager Instance => _instance;
 
     private ApplicationType _applicationType;
-    public ApplicationType ApplicationType { get; }
+    public ApplicationType ApplicationType => _applicationType;
 
     private void InitializeManager()
     {
