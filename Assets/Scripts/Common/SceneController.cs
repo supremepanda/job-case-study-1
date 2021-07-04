@@ -30,5 +30,10 @@ namespace Common
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        public void LoadScene(int sceneBuildIndex)
+        {
+            SceneManager.LoadScene(sceneBuildIndex);
+        }
     }
 }

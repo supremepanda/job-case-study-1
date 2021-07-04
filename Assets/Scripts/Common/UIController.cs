@@ -11,6 +11,11 @@ namespace Common
             sceneController.NextScene();
         }
 
+        public void OnDirectSceneButton(int sceneBuildIndex)
+        {
+            sceneController.LoadScene(sceneBuildIndex);
+        }
+
         public void OnLoadMainMenu()
         {
             sceneController.LoadMainMenu();
