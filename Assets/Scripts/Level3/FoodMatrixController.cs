@@ -5,7 +5,7 @@ namespace Level3
 {
     public class FoodMatrixController : MonoBehaviour
     {
-        private int[,] _gameArea = new int[6, 5];
+        private int[,] _gameArea;
         
         private FoodMatrix _foodMatrix;
         private FoodSpawner _foodSpawner;

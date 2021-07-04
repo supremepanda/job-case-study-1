@@ -239,7 +239,7 @@ MonoBehaviour:
   - {fileID: 3383485166295354439, guid: a30efbd4a25487848afc21948e016194, type: 3}
   - {fileID: 3620913734675795337, guid: 6682184dd80430347bb969601aa4f88e, type: 3}
   distanceOfFoods: 1.5
-  offset: {x: -3.7, y: 0, z: -1.7}
+  offset: {x: -3, y: 0, z: 4}
   gameAreaInScene: {fileID: 723666254}
 --- !u!4 &232096015
 Transform:

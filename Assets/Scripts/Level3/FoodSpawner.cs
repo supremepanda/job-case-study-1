@@ -20,7 +20,7 @@ namespace Level3
                 {
                     int ind = gameArea[height, width];
                     var food = Instantiate(foods[ind], new Vector3(
-                            height * distanceOfFoods + offset.x, 0f + offset.y, width * distanceOfFoods + offset.z),
+                            width * distanceOfFoods + offset.x, 0f + offset.y, height * -distanceOfFoods + offset.z),
                         Quaternion.identity, gameAreaInScene.transform);
                     FoodGameArea[height, width] = food.GetComponent<Food>();
                     food.GetComponent<Food>().index2DArray = (height, width);
