@@ -64,7 +64,7 @@ namespace Level3
             
             _firstPositions = (position1, position2);
 
-            position1 = Vector3.Lerp(position1, _firstPositions.Item2, 1);
+            position1 = Vector3.Lerp(position1, _firstPositions.Item2, 1f);
             food1.transform.position = position1;
 
             position2 = Vector3.Lerp(position2, _firstPositions.Item1, 1f);
@@ -93,11 +93,13 @@ namespace Level3
 
         private bool CheckRules()
         {
-            if (_foodCouple[0].foodType == _foodCouple[1].foodType) return false;
+            bool returnResult = false;
+            
+            if (_foodCouple[0].foodType == _foodCouple[1].foodType) return returnResult;
             if (Vector3.Distance(_foodCouple[0].transform.position, _foodCouple[1].transform.position) > 1.51f)
             {
                 Debug.Log(Vector3.Distance(_foodCouple[0].transform.position, _foodCouple[1].transform.position));
-                return false;
+                return returnResult;
             }
                 
 
@@ -145,7 +147,8 @@ namespace Level3
                 {
                     try
                     {
-                        Destroy(value.Item1.gameObject);
+                        StartCoroutine(DestroyObj(value.Item1.gameObject));
+                        returnResult = true;
                     }
                     catch (Exception e)
                     {
@@ -158,7 +161,9 @@ namespace Level3
                 {
                     try
                     {
-                        Destroy(value.Item1.gameObject);
+                        StartCoroutine(DestroyObj(value.Item1.gameObject));
+                        returnResult = true;
+
                     }
                     catch (Exception e)
                     {
@@ -171,7 +176,7 @@ namespace Level3
             }
             
             
-            return true;
+            return returnResult;
         }
 
         private List<(Food, (int, int))> CheckTrueCoordinates(List<(Food, (int, int))> list )
@@ -223,5 +228,12 @@ namespace Level3
             return result;
         }
         
+        private IEnumerator DestroyObj(GameObject obj)
+        {
+            yield return new WaitForSeconds(0.5f);
+            Destroy(obj);
+        }
     }
+    
+    
 }

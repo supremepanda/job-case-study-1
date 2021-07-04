@@ -13,7 +13,8 @@ namespace Common
         
             if (currentScene < sceneCount - 1)
             {
-                SceneManager.LoadScene(currentScene + 1);
+                //SceneManager.LoadScene(currentScene + 1);
+                SceneManager.LoadScene(SceneBuildIndex.Level3);
             }
             else
             {

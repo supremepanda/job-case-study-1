@@ -1,4 +1,5 @@
 ﻿using System;
+using Common;
 using Interfaces;
 using UnityEngine;
 
@@ -14,9 +15,11 @@ namespace Level3
         private Transform _selection;
 
         private CandyCrushGameControl _gameControl;
+        private ApplicationType _applicationType;
 
         private void ClearSelections(Food food1, Food food2)
         {   
+            Debug.Log("Launch");
             _selectionResponse.OnDeselect(food1.transform);
             _selectionResponse.OnDeselect(food2.transform);
         }
@@ -28,43 +31,60 @@ namespace Level3
 
         private void Start()
         {
+            _applicationType = FindObjectOfType<GameManager>().ApplicationType;
             _gameControl = FindObjectOfType<CandyCrushGameControl>();
             _gameControl.TwoFoodCollected += ClearSelections;
         }
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (_applicationType == ApplicationType.Editor)
             {
-                #region Ray
-
-                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                _selection = null;
-                if (Physics.Raycast(ray, out var hit))
+                if (Input.GetMouseButtonDown(0))
                 {
-                    var selection = hit.transform;
-                    if(selection.CompareTag(selectableTag))
+                    Ray(Input.mousePosition);
+                }
+            }
+            else
+            {
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+
+                    if (touch.phase == TouchPhase.Began)
                     {
-                        _selection = selection;
+                        Ray(touch.position);
                     }
                 }
-
-                #endregion
-
-                if (_selection == null) return;
-                if (_selection.GetComponent<Food>().isSelected)
+            }
+        }
+        private void Ray(Vector3 position)
+        {
+            var ray = Camera.main.ScreenPointToRay(position);
+            _selection = null;
+            if (Physics.Raycast(ray, out var hit))
+            {
+                var selection = hit.transform;
+                Debug.Log(hit.transform);
+                if (selection.CompareTag(selectableTag))
                 {
-                    _selectionResponse.OnDeselect(_selection);
+                    _selection = selection;
                 }
-                else
-                {
-                    _selectionResponse.OnSelect(_selection);
-                    OnSelectedFood?.Invoke(_selection.GetComponent<Food>());
-                }
-                /*else
-                {
-                    
-                }*/
+            }
+            Selection();
+        }
+        
+        private void Selection()
+        {
+            if (_selection == null) return;
+            if (_selection.GetComponent<Food>().isSelected)
+            {
+                _selectionResponse.OnDeselect(_selection);
+            }
+            else
+            {
+                _selectionResponse.OnSelect(_selection);
+                OnSelectedFood?.Invoke(_selection.GetComponent<Food>());
             }
         }
     }
