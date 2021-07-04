@@ -6,6 +6,7 @@ TagManager:
   tags:
   - olive
   - Food
+  - Paddle
   layers:
   - Default
   - TransparentFX
