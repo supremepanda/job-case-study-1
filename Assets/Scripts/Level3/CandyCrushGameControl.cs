@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Common;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -17,11 +18,13 @@ namespace Level3
         private (Vector3, Vector3) _firstPositions;
 
         private FoodSpawner _foodSpawner;
+        private Progress _progress;
         
         private void Start()
         {
             _foodSelectionManager = FindObjectOfType<FoodSelectionManager>();
             _foodSpawner = FindObjectOfType<FoodSpawner>();
+            _progress = FindObjectOfType<Progress>();
             _foodSelectionManager.OnSelectedFood += AddFood;
         }
 
@@ -232,6 +235,7 @@ namespace Level3
         {
             yield return new WaitForSeconds(0.5f);
             Destroy(obj);
+            _progress.IncreaseProgress();
         }
     }
     

@@ -24,19 +24,6 @@ namespace Common
             _finalPanel = FindObjectOfType<FinalPanel>();
         }
 
-        private void Update()
-        {
-#if UNITY_EDITOR
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                for (int i = 0; i < 64; i++)
-                {
-                    IncreaseProgress();
-                }
-            }
-#endif
-        }
-
         public void IncreaseProgress()
         {
             _percentage += _addPercentagePerOlive;
