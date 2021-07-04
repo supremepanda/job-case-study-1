@@ -9,6 +9,8 @@ namespace Level4
         private const float PaddleRange = 2.63f;
         public int direction = 1;
 
+        private ApplicationType _applicationType;
+
         public void PaddleLengthUp()
         {
             var transform1 = transform;
@@ -27,9 +29,34 @@ namespace Level4
             transform1.localScale = localScale;
         }
 
+        private void Start()
+        {
+            _applicationType = FindObjectOfType<GameManager>().ApplicationType;
+        }
+
         private void Update()
         {
-            Vector3 pos = Input.mousePosition;
+            if (_applicationType == ApplicationType.Editor)
+            {
+                PaddleMovement(Input.mousePosition);
+            }
+            else
+            {
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+
+                    if (touch.phase == TouchPhase.Moved)
+                    {
+                        PaddleMovement(touch.position);
+                    }
+                }
+            }
+        }
+
+        private void PaddleMovement(Vector3 position)
+        {
+            Vector3 pos = position;
             pos.z = 10;
             float wordlPos = Mathf.Clamp(Camera.main.ScreenToWorldPoint(pos).x, -2.63f, 2.63f);
 
