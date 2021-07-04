@@ -26,6 +26,18 @@ namespace Common
         public const int OliveAmount = 32;
     }
 
+    public static class Level4Constants
+    {
+        public const float DefaultSpeed = 7f;
+        public const float SpeedUpSpeed = 10f;
+
+        public const float PaddleLengthUp = 6f;
+        public const float PaddleLengthDown = 4f;
+
+        public const float BiggerBall = 3f;
+        public const float DefaultBall = 2f;
+    }
+
     public enum FoodType
     {
         Olive,
@@ -33,7 +45,8 @@ namespace Common
         Banana,
         HotDog,
         Hamburger,
-        CheeseSlice
+        CheeseSlice,
+        Watermelon
     }
 
     public enum Rewards
