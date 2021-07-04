@@ -42,4 +42,11 @@ namespace Common
         HotDog,
         Hamburger
     }
+
+    public enum CandyCrushFoodType
+    {
+        Cherry,
+        Banana,
+        Watermelon
+    }
 }
