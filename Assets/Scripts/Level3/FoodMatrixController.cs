@@ -5,17 +5,35 @@ namespace Level3
 {
     public class FoodMatrixController : MonoBehaviour
     {
-        public FoodMatrix foodMatrix;
+        private FoodMatrix _foodMatrix;
+        public int[,] gameArea = new int[6, 5];
 
+        private static T[,] Make2DArray<T>(T[] input, int height, int width)
+        {
+            T[,] output = new T[height, width];
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    output[i, j] = input[i * width + j];
+                }
+            }
+            return output;
+        }
+        
         private void InitializeFoodMatrix()
         {
             var textAsset = (TextAsset)Resources.Load("matrix");
-            foodMatrix = JsonUtility.FromJson<FoodMatrix>(textAsset.text);
+            _foodMatrix = JsonUtility.FromJson<FoodMatrix>(textAsset.text);
+
+            gameArea = Make2DArray(_foodMatrix.matrix, 6, 5);
+
         }
         
         private void Start()
         {
             InitializeFoodMatrix();
+            //Debug.Log(gameArea[2, 3]);
         }
     }
 }
