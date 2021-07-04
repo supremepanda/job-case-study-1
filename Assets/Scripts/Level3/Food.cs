@@ -10,11 +10,14 @@ namespace Level3
         private Material _defaultMaterial;
         public Material DefaultMaterial => _defaultMaterial;
 
+        [SerializeField] private int targetMaterialIndex;
+        public int TargetMaterialIndex => targetMaterialIndex;
+
         public bool isSelected = false;
         
         private void Start()
         {
-            _defaultMaterial = GetComponent<MeshRenderer>().material;
+            _defaultMaterial = GetComponent<MeshRenderer>().materials[targetMaterialIndex];
         }
     }
 }

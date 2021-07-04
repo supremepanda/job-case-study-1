@@ -21,8 +21,10 @@ namespace Level3
             {
                 var food = selectionRenderer.gameObject.GetComponent<Food>();
                 food.isSelected = true;
-                selectionRenderer.material = this.highlightMaterial;
-                
+                var materials = selectionRenderer.materials;
+                materials[food.TargetMaterialIndex] = this.highlightMaterial;
+                selectionRenderer.materials = materials;
+
             }
         }
 
@@ -33,7 +35,9 @@ namespace Level3
             {
                 var food = selectionRenderer.gameObject.GetComponent<Food>();
                 food.isSelected = false;
-                selectionRenderer.material = food.DefaultMaterial;
+                var materials = selectionRenderer.materials;
+                materials[food.TargetMaterialIndex] = food.DefaultMaterial;
+                selectionRenderer.materials = materials;
             }
         }
     }

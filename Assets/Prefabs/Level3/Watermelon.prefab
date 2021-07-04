@@ -111,4 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodType: 2
-  defaultMaterial: {fileID: 0}
+  targetMaterialIndex: 2
+  isSelected: 0
