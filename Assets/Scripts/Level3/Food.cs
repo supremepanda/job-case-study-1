@@ -14,6 +14,8 @@ namespace Level3
         public int TargetMaterialIndex => targetMaterialIndex;
 
         public bool isSelected = false;
+
+        public (int, int) index2DArray;
         
         private void Start()
         {

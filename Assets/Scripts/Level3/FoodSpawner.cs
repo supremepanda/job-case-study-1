@@ -14,15 +14,16 @@ namespace Level3
 
         public void SpawnFoods(int[,] gameArea)
         {
-            for (int i = 0; i < 6; i++)
+            for (int height = 0; height < 6; height++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int width = 0; width < 5; width++)
                 {
-                    int ind = gameArea[i, j];
+                    int ind = gameArea[height, width];
                     var food = Instantiate(foods[ind], new Vector3(
-                            i * distanceOfFoods + offset.x, 0f + offset.y, j * distanceOfFoods + offset.z),
+                            height * distanceOfFoods + offset.x, 0f + offset.y, width * distanceOfFoods + offset.z),
                         Quaternion.identity, gameAreaInScene.transform);
-                    FoodGameArea[i, j] = food.GetComponent<Food>();
+                    FoodGameArea[height, width] = food.GetComponent<Food>();
+                    food.GetComponent<Food>().index2DArray = (height, width);
                 }
             }
         }
