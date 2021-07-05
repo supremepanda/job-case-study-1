@@ -21,6 +21,9 @@ namespace Level4
         private int _wobblingBallCount;
         private int _biggerBallCount;
 
+        private bool _wobblingBallEnabled = false;
+        private int _wobblingBallDirection = 1;
+
         private static float HitFactor(Vector2 ballPos, Vector2 racketPos, float racketWidth) 
         {
             return (ballPos.x - racketPos.x) / racketWidth;
@@ -91,13 +94,20 @@ namespace Level4
         {
             _wobblingBallCount++;
             int count = _wobblingBallCount;
-            // toDo: wobbling yapcan
+            var value = Random.Range(0, 2);
+            if (value == 0)
+            {
+                value = -1;
+            }
 
-            yield return new WaitForSeconds(2f);
+            _wobblingBallDirection = value;
+            _wobblingBallEnabled = true;
+
+            yield return new WaitForSeconds(0.8f);
 
             if (_wobblingBallCount == count)
             {
-                // toDO: wobbling disable
+                _wobblingBallEnabled = false;
             }
         }
 
@@ -125,6 +135,14 @@ namespace Level4
             _paddle = FindObjectOfType<Paddle>();
             _progress = FindObjectOfType<Progress>();
             _rigidbody.velocity = new Vector3(0, 0, -1) * speed;
+        }
+
+        private void Update()
+        {
+            if (_wobblingBallEnabled)
+            {
+                _rigidbody.velocity = new Vector3(_rigidbody.velocity.x + _wobblingBallDirection * Mathf.Sin(30), 0, _rigidbody.velocity.z  - Mathf.Sin(30)).normalized * speed;
+            }
         }
     }
 }
