@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fac07ed-6444-4135-ab0d-23514d646add" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/SceneController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/Olive.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" />
@@ -83,6 +80,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uls1XQIggT3elYMPIkzSqauDSr" />
