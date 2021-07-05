@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using Common;
 using Interfaces;
-using Level1;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

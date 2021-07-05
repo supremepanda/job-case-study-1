@@ -1,8 +1,5 @@
-﻿using System;
-using Common;
-using Interfaces;
+﻿using Common;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Level1
 {

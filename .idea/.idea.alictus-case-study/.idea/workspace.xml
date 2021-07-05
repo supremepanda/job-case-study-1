@@ -5,28 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fac07ed-6444-4135-ab0d-23514d646add" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.alictus-case-study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.alictus-case-study/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/FinalPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/FinalPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/Progress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/Progress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/SceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/ImageToLevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/ImageToLevelGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level1/Olive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/Olive.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/Food.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/Food.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/SpawnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/Food.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/Food.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrix.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrixController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrixController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/HighlightSelectionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/HighlightSelectionResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/Ball.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/Paddle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/Paddle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/SpawnFoods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/SpawnFoods.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +57,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/EventManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/CollectOliveTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/CollectOliveEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/Progress.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IProgress.cs" />
@@ -72,27 +67,30 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/Constants.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/Progress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level4/Ball.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ImageToLevelGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Common/FinalPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Common/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/SceneController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/Olive.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level2/Food.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level2/SpawnController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/Food.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrix.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrixController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/HighlightSelectionResponse.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/Paddle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level4/Ball.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ImageToLevelGenerator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Common/FinalPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrix.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level4/SpawnFoods.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uls1XQIggT3elYMPIkzSqauDSr" />

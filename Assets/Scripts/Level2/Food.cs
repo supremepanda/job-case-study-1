@@ -1,6 +1,4 @@
-﻿using System;
-using Common;
-using Level1;
+﻿using Common;
 using UnityEngine;
 
 namespace Level2

@@ -1,5 +1,4 @@
-﻿using Common;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Level3
 {
