@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fac07ed-6444-4135-ab0d-23514d646add" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/SceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level1/Olive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/Olive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/Food.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/Food.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level2/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level2/SpawnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/Food.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/Food.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrix.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrixController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrixController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level3/HighlightSelectionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level3/HighlightSelectionResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/Paddle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/Paddle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level4/SpawnFoods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level4/SpawnFoods.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +26,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.22/UnityEngine.TestRunner/Utils/AttributeHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/Discovery.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Editor/Extensions/TrackExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Runtime/TextMeshPro.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Runtime/Events/Marker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Editor/Manipulators/EditMode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -69,7 +60,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/Constants.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/Progress.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/Ball.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ImageToLevelGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/FinalPanel.cs" />
@@ -85,12 +75,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/Food.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrix.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodMatrixController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/HighlightSelectionResponse.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/Paddle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/SpawnFoods.cs" />
+      <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Editor/Extensions/TrackExtensions.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/FoodSelectionManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uls1XQIggT3elYMPIkzSqauDSr" />

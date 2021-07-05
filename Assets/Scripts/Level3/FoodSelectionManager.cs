@@ -64,7 +64,6 @@ namespace Level3
             if (Physics.Raycast(ray, out var hit))
             {
                 var selection = hit.transform;
-                Debug.Log(hit.transform);
                 if (selection.CompareTag(selectableTag))
                 {
                     _selection = selection;

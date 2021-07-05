@@ -22,23 +22,18 @@ namespace Level4
             switch (foodType)
             {
                 case FoodType.Cherry:
-                    Debug.Log("cherry");
                     StartCoroutine(_ball.SpeedUp());
                     break;
                 case FoodType.Banana:
-                    Debug.Log("Banana");
                     StartCoroutine(_ball.PaddleLengthUp());
                     break;
                 case FoodType.Hamburger:
-                    Debug.Log("Hamburger");
                     _ball.PaddleControlReverse();
                     break;
                 case FoodType.CheeseSlice:
-                    Debug.Log("Cheese");
                     StartCoroutine(_ball.WobblingBall());
                     break;
                 case FoodType.Watermelon:
-                    Debug.Log("Watermelon");
                     StartCoroutine(_ball.BiggerBall());
                     break;
             }

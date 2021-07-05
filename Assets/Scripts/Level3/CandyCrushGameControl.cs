@@ -133,7 +133,6 @@ namespace Level3
             if (_foodCouple[0].foodType == _foodCouple[1].foodType) return returnResult;
             if (Vector3.Distance(_foodCouple[0].transform.position, _foodCouple[1].transform.position) > 1.51f)
             {
-                Debug.Log(Vector3.Distance(_foodCouple[0].transform.position, _foodCouple[1].transform.position));
                 return returnResult;
             }
                 
@@ -233,7 +232,6 @@ namespace Level3
         /// <returns></returns>
         private List<(Food, (int, int))> CheckTrueCoordinates(List<(Food, (int, int))> list )
         {
-            //Debug.Log($"List count:{list.Count}");
             List<(Food, (int, int))> result = new List<(Food, (int, int))>();
             
             for (int ind = 0; ind < list.Count; ind++)
