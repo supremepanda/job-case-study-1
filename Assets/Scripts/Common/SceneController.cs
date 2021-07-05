@@ -6,6 +6,9 @@ namespace Common
 {
     public class SceneController : MonoBehaviour
     {
+        /// <summary>
+        /// Load next scene using scenes in build.
+        /// </summary>
         public void NextScene()
         {
             int sceneCount = SceneManager.sceneCountInBuildSettings;

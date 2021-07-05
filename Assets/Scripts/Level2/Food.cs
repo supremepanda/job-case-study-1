@@ -24,9 +24,9 @@ namespace Level2
             
             if (foodType != FoodType.CheeseSlice)
             {
+                // Spawn next food according to collided food type.
                 _spawnController.SpawnFood((int) foodType + 1, new Vector3(other.GetContact(0).point.x, 0f, other.GetContact(0).point.z),
                     (FoodType) (int) foodType + 1, gameObject, other.gameObject);
-                //Destroy(gameObject);
             }
             else
             {

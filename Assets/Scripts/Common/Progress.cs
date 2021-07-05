@@ -13,20 +13,20 @@ namespace Common
         [SerializeField] private Slider progressSlider;
         [SerializeField] private TMP_Text progressText;
         
-        private float _addPercentagePerOlive;
+        private float _addPercentagePerItem;
         private float _percentage;
         
         private FinalPanel _finalPanel;
         
         private void Start()
         {
-            _addPercentagePerOlive = 100f / totalUnit;
             _finalPanel = FindObjectOfType<FinalPanel>();
+            _addPercentagePerItem = 100f / totalUnit;
         }
-
+        
         public void IncreaseProgress()
         {
-            _percentage += _addPercentagePerOlive;
+            _percentage += _addPercentagePerItem;
             progressSlider.value = _percentage;
             progressText.text = $"%{_percentage}";
 

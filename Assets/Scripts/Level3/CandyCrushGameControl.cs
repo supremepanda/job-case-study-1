@@ -9,12 +9,16 @@ namespace Level3
 {
     public class CandyCrushGameControl : MonoBehaviour
     {
-        public delegate void CollectTwoFood(Food food1, Food food2);
-
-        public event CollectTwoFood TwoFoodCollected;
+        // Trigger event when two food selected.
+        public delegate void SelectTwoFood(Food food1, Food food2);
+        
+        public event SelectTwoFood TwoFoodSelected;
         
         private FoodSelectionManager _foodSelectionManager;
+        
+        // List to store selected foods.
         private List<Food> _foodCouple = new List<Food>();
+        
         private (Vector3, Vector3) _firstPositions;
 
         private FoodSpawner _foodSpawner;
@@ -28,6 +32,9 @@ namespace Level3
             _foodSelectionManager.OnSelectedFood += AddFood;
         }
 
+        /// <summary>
+        /// Add food to control game rules. When two object selected, this function calls CheckRules function.
+        /// </summary>
         private void AddFood(Food food)
         {
             if (_foodCouple.Count < 2)
@@ -38,13 +45,12 @@ namespace Level3
                     ChangeFoodPositions();
                     if (CheckRules())
                     {
-                        TwoFoodCollected?.Invoke(_foodCouple[0], _foodCouple[1]);
+                        TwoFoodSelected?.Invoke(_foodCouple[0], _foodCouple[1]);
                         ClearFoods();
-                        // toDO: Action
                     }
                     else
                     {
-                        TwoFoodCollected?.Invoke(_foodCouple[0], _foodCouple[1]);
+                        TwoFoodSelected?.Invoke(_foodCouple[0], _foodCouple[1]);
                         StartCoroutine(ReversePositions());
                     }
                 }
@@ -56,7 +62,10 @@ namespace Level3
             _foodCouple.RemoveRange(0, 2);
             
         }
-
+        
+        /// <summary>
+        /// Change food positions without any conditions. It also saves first positions of foods to reverse this action.
+        /// </summary>
         private void ChangeFoodPositions()
         {
             var food1 = _foodCouple[0];
@@ -65,35 +74,58 @@ namespace Level3
             var position1 = food1.transform.position;
             var position2 = food2.transform.position;
             
+            // Save first positions of foods.
             _firstPositions = (position1, position2);
 
+            // Change food1 position to food2.
             position1 = Vector3.Lerp(position1, _firstPositions.Item2, 1f);
             food1.transform.position = position1;
 
+            // Change food2 position to food1.
             position2 = Vector3.Lerp(position2, _firstPositions.Item1, 1f);
             food2.transform.position = position2;
             
+            // Update FoodGameArea which is 2D Food array.
             _foodSpawner.FoodGameArea[food1.index2DArray.Item1, food1.index2DArray.Item2] = food2;
             _foodSpawner.FoodGameArea[food2.index2DArray.Item1, food2.index2DArray.Item2] = food1;
             
+            // Update food's index information on FoodGameArea.
             var tempFood1Index = food1.index2DArray;
             food1.index2DArray = food2.index2DArray;
             food2.index2DArray = tempFood1Index;
         }
 
+        /// <summary>
+        /// Reverse changed positions.
+        /// </summary>
+        /// <returns></returns>
         private IEnumerator ReversePositions()
         {
             yield return new WaitForSeconds(1.5f);
             var food1 = _foodCouple[0];
             var food2 = _foodCouple[1];
 
+            // Change food positions.
             food1.transform.position = Vector3.Lerp(food1.transform.position, _firstPositions.Item1, 1f);
             food2.transform.position = Vector3.Lerp(food2.transform.position, _firstPositions.Item2, 1f);
             _firstPositions = (Vector3.zero, Vector3.zero);
+
+            // Update FoodGameArea 2D array.
+            _foodSpawner.FoodGameArea[food2.index2DArray.Item1, food2.index2DArray.Item2] = food1;
+            _foodSpawner.FoodGameArea[food1.index2DArray.Item1, food1.index2DArray.Item2] = food2;
+            
+            // Update food's index information on FoodGameArea.
+            var food1IndexArray = food1.index2DArray;
+            food1.index2DArray = food2.index2DArray;
+            food2.index2DArray = food1IndexArray;
             
             ClearFoods();
         }
 
+        /// <summary>
+        /// Check nodes related with selected foods to destroy foods or not.
+        /// </summary>
+        /// <returns></returns>
         private bool CheckRules()
         {
             bool returnResult = false;
@@ -106,13 +138,20 @@ namespace Level3
             }
                 
 
+            // Horizontal food list +-2 unit from selected food. (<Food, index2D>)
             List<(Food, (int, int))> horizontalCheck = new List<(Food, (int, int))>();
+            
+            // Vertical food list +-2 unit from selected food. (<Food, index2D>)
             List<(Food, (int, int))> verticalCheck = new List<(Food, (int, int))>();
-
+            
+            // Paired food list.
             List<Food> result = new List<Food>();
+            
             
             foreach (var food in _foodCouple)
             {
+                #region Add related food nodes to their lists
+
                 for (int ind = -2; ind < 3; ind++)
                 {
                     try
@@ -121,7 +160,6 @@ namespace Level3
                         if (_foodSpawner.FoodGameArea[indexHorizontal.Item1, indexHorizontal.Item2] != null)
                         {
                             horizontalCheck.Add((_foodSpawner.FoodGameArea[indexHorizontal.Item1, indexHorizontal.Item2], indexHorizontal));
-                            //Debug.Log((_foodSpawner.FoodGameArea[indexHorizontal.Item1, indexHorizontal.Item2], indexHorizontal));
                         }
                     }
                     catch (IndexOutOfRangeException e)
@@ -145,6 +183,10 @@ namespace Level3
                         continue;
                     }
                 }
+                #endregion
+
+                #region Check paired foods on horizontal and vertical
+
                 var correctsHorizontal = CheckTrueCoordinates(horizontalCheck);
                 foreach (var value in correctsHorizontal)
                 {
@@ -155,7 +197,7 @@ namespace Level3
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine(e);
+                        //Console.WriteLine(e);
                     }
                 }
             
@@ -170,9 +212,11 @@ namespace Level3
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine(e);
+                        //Console.WriteLine(e);
                     }
                 }
+
+                #endregion
                 
                 horizontalCheck.Clear();
                 verticalCheck.Clear();
@@ -182,6 +226,11 @@ namespace Level3
             return returnResult;
         }
 
+        /// <summary>
+        /// Check can foods combos and return combo food list.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
         private List<(Food, (int, int))> CheckTrueCoordinates(List<(Food, (int, int))> list )
         {
             //Debug.Log($"List count:{list.Count}");
@@ -189,40 +238,47 @@ namespace Level3
             
             for (int ind = 0; ind < list.Count; ind++)
             {
-                //Debug.Log($"List ind: {list[ind]}");
                 if (ind != 0)
                 {
                     if (result.Count != 0)
-                    {
+                    {   
                         if (list[ind].Item1.foodType != result[0].Item1.foodType)
-                        {
+                        {   
+                            // No combo possible because there are only 1 or 2 same food
+                            // and new one's foodType is different.
+                            // Clear result and add new one.
                             if (result.Count < 3)
                             {
                                 result.Clear();
                                 result.Add(list[ind]);
                             }
+                            // Result has a combo that's why result should be ended.
                             else
                             {
                                 return result;
                             }
                         }
+                        // Add new one because there is a combo with same food.
                         else
                         {
                             result.Add(list[ind]);
                         }
                     }
+                    // If result has no food, just add new one.
                     else
                     {
                         result.Add(list[ind]);
                     }
                     
                 }
+                // First action.
                 else
                 {
                     result.Add(list[ind]);
                 }
             }
-
+            
+            // If calculated result has less than 3 member, it is not a correct result.
             if (result.Count < 3)
             {
                 result.Clear();

@@ -10,6 +10,10 @@ namespace Level1
     {
         [SerializeField] private GameObject olive;
 
+        /// <summary>
+        /// Spawn olives randomly.
+        /// </summary>
+        /// <param name="amount"></param>
         public void SpawnOlive(int amount)
         {
             for (int ind = 0; ind < amount; ind++)

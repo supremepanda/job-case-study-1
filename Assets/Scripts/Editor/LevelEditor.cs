@@ -33,7 +33,9 @@ namespace Editor
             {
                 PreviewLevel();
             }
-            
+
+            #region Texture Labels
+
             GUILayout.BeginHorizontal();
             GUILayout.Label(_textures[0], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.Label(_textures[1], GUILayout.Width(50), GUILayout.Height(50));
@@ -82,6 +84,8 @@ namespace Editor
             GUILayout.Label(_textures[29], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
 
+            #endregion
+
             if (GUILayout.Button("Save Json File"))
             {
 #if UNITY_EDITOR
@@ -91,7 +95,10 @@ namespace Editor
             }
 
         }
-
+        
+        /// <summary>
+        /// Preview level given matrix.
+        /// </summary>
         public void PreviewLevel()
         {
             FoodMatrix matrix = JsonUtility.FromJson<FoodMatrix>(_matrixJson);
@@ -101,7 +108,10 @@ namespace Editor
                 _textures[ind] = GetPreviewTexture(matrix.matrix[ind]);
             }
         }
-
+        
+        /// <summary>
+        /// Get preview texture according to food value.
+        /// </summary>
         private Texture2D GetPreviewTexture(int value)
         {
             Texture2D result = null;
@@ -121,6 +131,9 @@ namespace Editor
             return result;
         }
         
+        /// <summary>
+        /// Save json data to resources.
+        /// </summary>
         public static void SaveJsonData(string data, string fileName)
         {
             FileStream fStream = new FileStream($"Assets/Resources/{fileName}", FileMode.Create,

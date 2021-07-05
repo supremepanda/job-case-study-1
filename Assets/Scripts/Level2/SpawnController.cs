@@ -20,6 +20,10 @@ namespace Level2
 
         private bool _canSpawn = true;
         
+        /// <summary>
+        /// Spawn olives on pre-defined and shuffled spawn positions.
+        /// </summary>
+        /// <param name="amount">olive amount</param>
         public void SpawnOlive(int amount)
         {
             spawnPositions = Shuffle(spawnPositions);
@@ -29,7 +33,7 @@ namespace Level2
                 Instantiate(olive, spawnPositions[ind].position, Quaternion.identity);
             }
         }
-
+        
         private Transform[] Shuffle(Transform[] values)
         {
             for (int t = 0; t < values.Length; t++ )
@@ -42,7 +46,9 @@ namespace Level2
 
             return values;
         }
-
+        /// <summary>
+        /// Spawn next food function. 
+        /// </summary>
         public void SpawnFood(int index, Vector3 spawnPos, FoodType foodType, GameObject spawner, GameObject collidedObject)
         {
             if (_canSpawn)
@@ -50,8 +56,13 @@ namespace Level2
                 _canSpawn = false;
                 var food = Instantiate(foods[index], spawnPos, Quaternion.identity).GetComponent<Food>().foodType =
                     foodType;
+                
+                // Handle calling SpawnFood function twice problem using _canSpawn variable.
                 StartCoroutine(ActiveCanSpawn());
+                
                 _progress.IncreaseProgress();
+                
+                //Destroy two collided object.
                 Destroy(spawner);
                 Destroy(collidedObject);
             }

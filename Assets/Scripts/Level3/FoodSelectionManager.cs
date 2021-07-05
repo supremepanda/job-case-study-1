@@ -17,9 +17,9 @@ namespace Level3
         private CandyCrushGameControl _gameControl;
         private ApplicationType _applicationType;
 
+        // Clear selected foods.
         private void ClearSelections(Food food1, Food food2)
-        {   
-            Debug.Log("Launch");
+        {
             _selectionResponse.OnDeselect(food1.transform);
             _selectionResponse.OnDeselect(food2.transform);
         }
@@ -33,7 +33,7 @@ namespace Level3
         {
             _applicationType = FindObjectOfType<GameManager>().ApplicationType;
             _gameControl = FindObjectOfType<CandyCrushGameControl>();
-            _gameControl.TwoFoodCollected += ClearSelections;
+            _gameControl.TwoFoodSelected += ClearSelections;
         }
 
         private void Update()
@@ -74,6 +74,9 @@ namespace Level3
             Selection();
         }
         
+        /// <summary>
+        /// Select food function triggers OnSelectedFood event.
+        /// </summary>
         private void Selection()
         {
             if (_selection == null) return;

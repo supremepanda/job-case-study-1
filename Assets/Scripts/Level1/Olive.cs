@@ -22,7 +22,7 @@ namespace Level1
             _rigidbody = GetComponent<Rigidbody>();
             _progress = FindObjectOfType<Progress>();
         }
-
+        
         public void Collected()
         {
             _meshRenderer.material = collectedColorMaterial;

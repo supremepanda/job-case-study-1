@@ -7,11 +7,21 @@ namespace Level3
     {
         public Food[,] FoodGameArea = new Food[6, 5];
         
+        [Tooltip("Three food types.")]
         [SerializeField] private GameObject[] foods = new GameObject[3];
+        
+        [Tooltip("Distance between to food.")]
         [SerializeField] private float distanceOfFoods;
+        
+        [Tooltip("Offset to replace GameArea parent object correctly.")]
         [SerializeField] private Vector3 offset;
+        
+        [Tooltip("Game area parent object to instantiate foods inside in it.")]
         [SerializeField] private GameObject gameAreaInScene;
 
+        /// <summary>
+        /// Spawn foods into game area.
+        /// </summary>
         public void SpawnFoods(int[,] gameArea)
         {
             for (int height = 0; height < 6; height++)

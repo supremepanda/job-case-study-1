@@ -7,6 +7,7 @@ namespace Level4
 {
     public class Ball : MonoBehaviour
     {
+        // Trigger OnPowerUp event when powerup called.
         public delegate void PowerUpEvent(FoodType foodType);
         public event PowerUpEvent OnPowerUp;
         
@@ -56,7 +57,14 @@ namespace Level4
         }
 
         #region PowerUp Functions
-
+        
+        /*
+         * There are powerups that they have own specific actions.
+         * There is a main idea of using this powerups, if a powerup calls own function one after another,
+         * functions control count value to get same value. If it is not, it not cancel the powerup because
+         * there is a function that it is the last called function which will disable the powerup.
+         */
+        
         public IEnumerator SpeedUp()
         {
             _speedUpCount++;
@@ -84,7 +92,7 @@ namespace Level4
                 _paddle.PaddleLengthDown();
             }
         }
-
+        
         public void PaddleControlReverse()
         {
             _paddle.direction *= -1;
@@ -110,6 +118,16 @@ namespace Level4
                 _wobblingBallEnabled = false;
             }
         }
+        
+        /// <summary>
+        /// Wobbling ball vector calculation using sinus wave on x and z axis.
+        /// </summary>
+        /// <returns></returns>
+        private Vector3 WobblingBallVector()
+        {
+            return new Vector3(_rigidbody.velocity.x + _wobblingBallDirection * Mathf.Sin(30), 
+                0, _rigidbody.velocity.z  - Mathf.Sin(30)).normalized * speed;
+        }
 
         public IEnumerator BiggerBall()
         {
@@ -134,6 +152,7 @@ namespace Level4
             _rigidbody = GetComponent<Rigidbody>();
             _paddle = FindObjectOfType<Paddle>();
             _progress = FindObjectOfType<Progress>();
+            
             _rigidbody.velocity = new Vector3(0, 0, -1) * speed;
         }
 
@@ -141,7 +160,7 @@ namespace Level4
         {
             if (_wobblingBallEnabled)
             {
-                _rigidbody.velocity = new Vector3(_rigidbody.velocity.x + _wobblingBallDirection * Mathf.Sin(30), 0, _rigidbody.velocity.z  - Mathf.Sin(30)).normalized * speed;
+                _rigidbody.velocity = WobblingBallVector();
             }
         }
     }

@@ -18,8 +18,10 @@ namespace Level3
         
         private FoodMatrix _foodMatrix;
         private FoodSpawner _foodSpawner;
-        
-        
+
+        /// <summary>
+        /// Convert 1D array to 2D array
+        /// </summary>
         private static T[,] Make2DArray<T>(T[] input, int height, int width)
         {
             T[,] output = new T[height, width];
@@ -33,6 +35,9 @@ namespace Level3
             return output;
         }
         
+        /// <summary>
+        /// Initialize food matrix according to selected matrixType. 
+        /// </summary>
         private void InitializeFoodMatrix()
         {
             TextAsset textAsset = null;

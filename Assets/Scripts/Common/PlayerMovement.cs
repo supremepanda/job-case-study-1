@@ -13,7 +13,7 @@ namespace Common
             _agent = GetComponent<NavMeshAgent>();
             _applicationType = GameManager.Instance.ApplicationType;
         }
-
+        
         private void AgentMovement(Vector3 targetPosition)
         {
             RaycastHit hit;

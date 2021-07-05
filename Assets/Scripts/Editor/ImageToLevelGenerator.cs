@@ -16,6 +16,7 @@ namespace Editor
         private const string Cherry = "Cherry";
         private const string Watermelon = "Watermelon";
 
+        // Preview game area textures.
         private Texture2D[] _textures = new Texture2D[50];
         
         private Texture2D _image;
@@ -35,7 +36,9 @@ namespace Editor
             {
                 PreviewLevel();
             }
-            
+
+            #region Texture labels
+
             GUILayout.BeginHorizontal();
             GUILayout.Label(_textures[0], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.Label(_textures[1], GUILayout.Width(50), GUILayout.Height(50));
@@ -83,6 +86,8 @@ namespace Editor
             GUILayout.Label(_textures[28], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.Label(_textures[29], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
+
+            #endregion
             
             if (GUILayout.Button("Save Json File"))
             {
@@ -93,6 +98,9 @@ namespace Editor
             }
         }
 
+        /// <summary>
+        /// Preview level according to closest colors.
+        /// </summary>
         private void PreviewLevel()
         {
             _matrix.matrix = new int[30];
@@ -104,18 +112,25 @@ namespace Editor
             {
                 var pixelColor = _image.GetPixel(heightIndex * multiplier, widthIndex * multiplier);
                 
+                // Calculate minimum distance to get closest color
                 (float, int)[] distances = new (float, int)[3];
                 distances[0] = (Vector4.Distance(pixelColor, new Vector4(255, 0, 0, 1)), 0);
                 distances[1] = (Vector4.Distance(pixelColor, new Vector4(255, 242, 0, 1)), 1);
                 distances[2] = (Vector4.Distance(pixelColor,new Vector4(0, 255, 0, 1)), 2);
                 
-                //Debug.Log(distances.Min().Item2);
                 var value = distances.Min().Item2;
+                
+                // Assign correct value for each unit of matrix.
                 _matrix.matrix[multiplier] = value;
+                
+                // Assign texture according to value.
                 _textures[multiplier] = GetPreviewTexture(value);
             }
         }
         
+        /// <summary>
+        /// Get preview texture according to food value.
+        /// </summary>
         private Texture2D GetPreviewTexture(int value)
         {
             Texture2D result = null;
@@ -135,6 +150,9 @@ namespace Editor
             return result;
         }
         
+        /// <summary>
+        /// Save json data to resources.
+        /// </summary>
         public static void SaveJsonData(string data, string fileName)
         {
             FileStream fStream = new FileStream($"Assets/Resources/{fileName}", FileMode.Create,

@@ -14,6 +14,10 @@ namespace Level4
             _ball.OnPowerUp += PowerUpBall;
         }
 
+        /// <summary>
+        /// When powerup event triggered, this function select correct powerup
+        /// and call correct function from ball.
+        /// </summary>
         private void PowerUpBall(FoodType foodType)
         {
             switch (foodType)

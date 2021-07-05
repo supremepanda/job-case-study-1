@@ -15,6 +15,7 @@ namespace Level3
 
         public bool isSelected = false;
 
+        // Index on FoodGameArea 2D array.
         public (int, int) index2DArray;
         
         private void Start()

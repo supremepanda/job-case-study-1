@@ -7,13 +7,10 @@ namespace Level3
     internal class HighlightSelectionResponse : MonoBehaviour, ISelectionResponse
     {
         [SerializeField] private Material highlightMaterial;
-        private CandyCrushGameControl _gameControl;
-
-        private void Start()
-        {
-            _gameControl = FindObjectOfType<CandyCrushGameControl>();
-        }
-
+        
+        /// <summary>
+        /// Select food and change its material to highlight material.
+        /// </summary>
         public void OnSelect(Transform selection)
         {
             var selectionRenderer = selection.GetComponent<Renderer>();
@@ -28,6 +25,9 @@ namespace Level3
             }
         }
 
+        /// <summary>
+        /// Deselect food and change its material to default material.
+        /// </summary>
         public void OnDeselect(Transform selection)
         {
             var selectionRenderer = selection.GetComponent<Renderer>();

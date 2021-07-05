@@ -9,6 +9,9 @@ namespace Common
         private GameObject _finalPanel;
         private TMP_Text _congratsText;
 
+        /// <summary>
+        /// Activate final game over panel.
+        /// </summary>
         public void ActivateFinalPanel()
         {
             _congratsText.text = $"{SceneManager.GetActiveScene().name} Completed!";
