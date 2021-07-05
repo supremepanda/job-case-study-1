@@ -3,12 +3,22 @@ using UnityEngine;
 
 namespace Level3
 {
+    public enum MatrixType
+    {
+        Default,
+        LevelEditor,
+        ImageGenerator
+    }
+    
     public class FoodMatrixController : MonoBehaviour
     {
+        [SerializeField] private MatrixType matrixType;
+        
         private int[,] _gameArea;
         
         private FoodMatrix _foodMatrix;
         private FoodSpawner _foodSpawner;
+        
         
         private static T[,] Make2DArray<T>(T[] input, int height, int width)
         {
@@ -25,7 +35,16 @@ namespace Level3
         
         private void InitializeFoodMatrix()
         {
-            var textAsset = (TextAsset)Resources.Load("matrix");
+            TextAsset textAsset = null;
+            if (matrixType == MatrixType.Default)
+            {
+                textAsset = (TextAsset)Resources.Load("matrix");
+            }
+            else if (matrixType == MatrixType.LevelEditor)
+            {
+                textAsset = (TextAsset)Resources.Load("levelEditorMatrix");
+            }
+            
             _foodMatrix = JsonUtility.FromJson<FoodMatrix>(textAsset.text);
 
             _gameArea = Make2DArray(_foodMatrix.matrix, 6, 5);

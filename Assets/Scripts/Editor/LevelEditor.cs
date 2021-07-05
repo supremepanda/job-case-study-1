@@ -1,7 +1,9 @@
-﻿using Level3;
+﻿using System.IO;
+using Level3;
 using UnityEditor;
 using UnityEditor.EditorTools;
 using UnityEngine;
+using UnityEngine.Windows;
 
 namespace Editor
 {
@@ -14,7 +16,7 @@ namespace Editor
         private const string Cherry = "Cherry";
         private const string Watermelon = "Watermelon";
 
-        private Texture2D[] _textures = new Texture2D[30];
+        private Texture2D[] _textures = new Texture2D[50];
 
         [MenuItem("Tools/Level Editor")]
         public static void ShowWindow()
@@ -33,52 +35,61 @@ namespace Editor
             }
             
             GUILayout.BeginHorizontal();
-            GUILayout.Label(_textures[0], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[1], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[2], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[3], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[4], GUILayout.Width(30), GUILayout.Height(30));
+            GUILayout.Label(_textures[0], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[1], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[2], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[3], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[4], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
             
             GUILayout.BeginHorizontal();
-            GUILayout.Label(_textures[5], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[6], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[7], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[8], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[9], GUILayout.Width(30), GUILayout.Height(30));
+            GUILayout.Label(_textures[5], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[6], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[7], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[8], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[9], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
             
             GUILayout.BeginHorizontal();
-            GUILayout.Label(_textures[10], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[11], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[12], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[13], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[14], GUILayout.Width(30), GUILayout.Height(30));
+            GUILayout.Label(_textures[10], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[11], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[12], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[13], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[14], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
             
             GUILayout.BeginHorizontal();
-            GUILayout.Label(_textures[15], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[16], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[17], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[18], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[19], GUILayout.Width(30), GUILayout.Height(30));
+            GUILayout.Label(_textures[15], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[16], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[17], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[18], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[19], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
             
             GUILayout.BeginHorizontal();
-            GUILayout.Label(_textures[20], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[21], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[22], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[23], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[24], GUILayout.Width(30), GUILayout.Height(30));
+            GUILayout.Label(_textures[20], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[21], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[22], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[23], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[24], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
             
             GUILayout.BeginHorizontal();
-            GUILayout.Label(_textures[25], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[26], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[27], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[28], GUILayout.Width(30), GUILayout.Height(30));
-            GUILayout.Label(_textures[29], GUILayout.Width(30), GUILayout.Height(30));
+            GUILayout.Label(_textures[25], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[26], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[27], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[28], GUILayout.Width(50), GUILayout.Height(50));
+            GUILayout.Label(_textures[29], GUILayout.Width(50), GUILayout.Height(50));
             GUILayout.EndHorizontal();
+
+            if (GUILayout.Button("Save Json File"))
+            {
+#if UNITY_EDITOR
+                SaveJsonData(_matrixJson, "levelEditorMatrix.json");
+                Debug.Log("Saving completed. Please press 'ALT + TAB' combination on Unity.");
+#endif
+            }
+
         }
 
         public void PreviewLevel()
@@ -109,7 +120,21 @@ namespace Editor
 
             return result;
         }
+        
+        public static void SaveJsonData(string data, string fileName)
+        {
+            FileStream fStream = new FileStream($"Assets/Resources/{fileName}", FileMode.Create,
+                FileAccess.Write,
+                FileShare.None);
+            StreamWriter writer = new StreamWriter(fStream);
+            writer.Write(data);
+
+            writer.Close();
+            fStream.Close();
+        }
     }
+    
+    
     
     
 }
