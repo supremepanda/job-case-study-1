@@ -28,7 +28,6 @@ namespace Common
     
         private void Awake()
         {
-            Debug.Log($"width: {Screen.width}, height: {Screen.height}");
             if (_instance != null && _instance != this)
             {
                 Destroy(gameObject);
