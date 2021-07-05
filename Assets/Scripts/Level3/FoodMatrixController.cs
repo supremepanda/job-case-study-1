@@ -44,6 +44,10 @@ namespace Level3
             {
                 textAsset = (TextAsset)Resources.Load("levelEditorMatrix");
             }
+            else if (matrixType == MatrixType.ImageGenerator)
+            {
+                textAsset = (TextAsset)Resources.Load("imageGeneratorMatrix");
+            }
             
             _foodMatrix = JsonUtility.FromJson<FoodMatrix>(textAsset.text);
 
