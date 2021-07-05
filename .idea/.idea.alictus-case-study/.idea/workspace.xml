@@ -5,28 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fac07ed-6444-4135-ab0d-23514d646add" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IProgress.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IProgress.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/ISpawnOlive.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/ISpawnOlive.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/OliveCollect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/Progress.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level1/Progress.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.alictus-case-study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.alictus-case-study/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PhysicsMaterials/Olive.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PhysicsMaterials/Olive.physicMaterial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Olive.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Olive.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Common/Environment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Common/Environment.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level1/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level1/Banana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level1/Olive.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level1/Olive.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level2/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level2/Banana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level2/Cheese (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level2/Cheese (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level2/Cherry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level2/Cherry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level2/Hamburger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level2/Hamburger.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level2/Hotdog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level2/Hotdog.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level2/Olive.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level2/Olive.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level3/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level3/Banana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level3/Cherry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level3/Cherry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level3/Watermelon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level3/Watermelon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level4/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level4/Banana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level4/Cheese.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level4/Cheese.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level4/Cherry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level4/Cherry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level4/Hamburger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level4/Hamburger.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level4/Watermelon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level4/Watermelon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Banana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cherry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cherry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Watermelon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Watermelon.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +44,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FinalPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -75,6 +72,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/Progress.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uls1XQIggT3elYMPIkzSqauDSr" />
