@@ -28,7 +28,14 @@ namespace Common
 
         public void OnInventoryButton()
         {
-        
+            var inventoryPanel = GameObject.Find("Canvas").transform.Find("InventoryPanel").gameObject;
+            inventoryPanel.SetActive(true);
+        }
+
+        public void CloseInventoryButton()
+        {
+            var inventoryPanel = GameObject.Find("Canvas/InventoryPanel");
+            inventoryPanel.SetActive(false);
         }
     }
 }

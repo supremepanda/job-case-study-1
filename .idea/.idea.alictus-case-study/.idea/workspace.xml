@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fac07ed-6444-4135-ab0d-23514d646add" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.alictus-case-study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.alictus-case-study/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/UIController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +30,11 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.22/UnityEngine.TestRunner/Utils/AttributeHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level1/OliveSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/Discovery.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/RotateAround.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Editor/Extensions/TrackExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Runtime/TextMeshPro.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Runtime/Events/Marker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu/Reward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.18/Editor/Manipulators/EditMode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -59,9 +64,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/Progress.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/Ball.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ImageToLevelGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/FinalPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Common/SceneController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level1/Olive.cs" />
@@ -81,6 +84,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Level3/CandyCrushGameControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level4/PowerUp.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ImageToLevelGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/RotateAround.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu/Reward.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Common/UIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uls1XQIggT3elYMPIkzSqauDSr" />
