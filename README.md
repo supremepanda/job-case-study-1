@@ -1,5 +1,7 @@
 # Alictus Case Study
 
+Furkan Baldır furkanbaldir13@gmail.com
+
 There are some notes about case:
 
 - Ordering levels controlling on Build settings. (build indexes)
