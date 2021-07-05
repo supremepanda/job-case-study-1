@@ -147,6 +147,11 @@ namespace Level4
         
         #endregion
 
+        private void DisableBall()
+        {
+            gameObject.SetActive(false);
+        }
+        
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
@@ -154,6 +159,8 @@ namespace Level4
             _progress = FindObjectOfType<Progress>();
             
             _rigidbody.velocity = new Vector3(0, 0, -1) * speed;
+
+            _progress.OnGameEnd += DisableBall;
         }
 
         private void Update()

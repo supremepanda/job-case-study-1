@@ -8,6 +8,10 @@ namespace Common
 {
     public class Progress : MonoBehaviour, IProgress
     {
+        public delegate void GameEnd();
+
+        public event GameEnd OnGameEnd;
+        
         [Tooltip("Total unit amount to calculate percentage per unit")]
         [SerializeField] private int totalUnit;
         
@@ -42,6 +46,7 @@ namespace Common
                 
                 _finalPanel.ActivateFinalPanel();
                 GiveReward();
+                OnGameEnd?.Invoke();
             }
         }
 
