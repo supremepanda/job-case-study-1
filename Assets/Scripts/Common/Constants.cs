@@ -51,8 +51,8 @@ namespace Common
     {
         Olive,
         Banana,
-        HotDog,
-        Hamburger
+        Cherry,
+        Watermelon
     }
 
     public enum CandyCrushFoodType

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common;
 using UnityEngine;
 
 namespace MainMenu
@@ -7,6 +7,9 @@ namespace MainMenu
     {
         private const float ReferenceWidth = 289f;
         private const float ReferenceHeight = 513f;
+
+        [SerializeField] private Rewards _rewardType;
+        
         private Vector3 _currentScale;
 
         private void Start()

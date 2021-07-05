@@ -30,7 +30,7 @@ namespace Level4
 
         private void Start()
         {
-            _applicationType = FindObjectOfType<GameManager>().ApplicationType;
+            _applicationType = GameManager.Instance.ApplicationType;
         }
 
         private void Update()
