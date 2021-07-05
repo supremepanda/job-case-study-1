@@ -30,7 +30,7 @@ namespace Editor
             GUILayout.Label("Please enter your custom 6x5 matrix as json file. Then if you want to preview" +
                             "the matrix, please click Preview button.\nClick Save Json File button to save new matrix json file.");
             GUILayout.Label(
-                "Note: To show your custom matrix on game, you should change MatrixType on 'FoodMatrixController' in hierarchy", EditorStyles.helpBox);
+                "Note: To show your custom matrix on game, you should change MatrixType on 'FoodMatrixController' to 'Level Editor' in hierarchy", EditorStyles.helpBox);
 
             _matrixJson = EditorGUILayout.TextField("Matrix Json", _matrixJson);
 

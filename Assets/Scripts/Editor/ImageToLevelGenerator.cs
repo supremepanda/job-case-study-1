@@ -30,8 +30,13 @@ namespace Editor
         private void OnGUI()
         {
             GUILayout.Label("Generate New Level from an Image", EditorStyles.boldLabel);
+            
+            GUILayout.Label("Please enter your image. Then if you want to preview" +
+                            "the matrix, please click Preview button.\nClick Save Json File button to save new matrix json file.");
+            GUILayout.Label(
+                "Note: To show your custom matrix on game, you should change MatrixType on 'FoodMatrixController' to 'Image Generator' in hierarchy", EditorStyles.helpBox);
+            
             _image = EditorGUILayout.ObjectField("Image", _image, typeof(Texture2D), false) as Texture2D;
-
             if (GUILayout.Button("Preview Level"))
             {
                 PreviewLevel();
