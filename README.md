@@ -1,13 +1,3 @@
-# Alictus Case Study
+# Job Case Study 1
 
-Furkan Baldır furkanbaldir13@gmail.com
-
-There are some notes about case:
-
-- Ordering levels controlling on Build settings. (build indexes)
-
-- Editor windows can be found on Tools/..
-
-- Level2 have a little bug, rarely one food can be missing.
-
-- Inventory exist on just MainMenu
+![alt text](![alt text](https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/Level1.png)
