@@ -1,6 +1,10 @@
 # Job Case Study 1
 
-It is a job case study project developed in 3 days. Here screenshots of game:
+It is a job case study project developed in 3 days. 
+
+Platform: Mobile
+
+Here screenshots of game:
 
 ### Main Menu
 <img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/mainMenu.png" width="300"/>
