@@ -1,13 +1,28 @@
-# Alictus Case Study
+# Job Case Study 1
 
-Furkan Baldır furkanbaldir13@gmail.com
+It is a job case study project developed in 3 days. Here screenshots of game:
 
-There are some notes about case:
+### Main Menu
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/mainMenu.png" width="300"/>
 
-- Ordering levels controlling on Build settings. (build indexes)
+### Level 1
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/Level1.png" width="300"/>
 
-- Editor windows can be found on Tools/..
+### Level 2
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/Level2.png" width="300"/>
 
-- Level2 have a little bug, rarely one food can be missing.
+### Level 3
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/Level3.png" width="300"/>
 
-- Inventory exist on just MainMenu
+### Level 4
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/Level4.png" width="300"/>
+
+### Level Editor using Image
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/LevelEditorFromImage.png" width="300"/>
+
+### Level Editor using Matrix
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/LevelEditorFromMatrix.png" width="300"/>
+
+### Rewards (represented 3D objects on Canvas)
+<img src="https://github.com/supremepanda/job-case-study-1/blob/master/case-screenshots/rewards.png" width="300"/>
+
